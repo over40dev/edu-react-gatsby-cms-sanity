@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "za77d298",
+    "projectId": "vgus6rh0",
     "dataset": "production"
   },
   "project": {
-    "name": "slicks-slices"
+    "name": "slicks-slices-cogentx"
   },
   "plugins": [
     "@sanity/base",
@@ -17,9 +17,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
