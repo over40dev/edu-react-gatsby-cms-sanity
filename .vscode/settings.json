@@ -30,5 +30,6 @@
   },
   // Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
   // "prettier.disableLanguages": ["javascript", "javascriptreact"],
-  "peacock.color": "#FF2C70"
+  "peacock.color": "#FF2C70",
+  "terminal.integrated.fontFamily": "monospace"
 }

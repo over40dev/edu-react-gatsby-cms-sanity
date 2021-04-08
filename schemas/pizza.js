@@ -65,13 +65,22 @@ export default {
       topping1: 'toppings.1.name',
       topping2: 'toppings.2.name',
       topping3: 'toppings.3.name',
+      veg0: 'toppings.0.vegetarian',
+      veg1: 'toppings.1.vegetarian',
+      veg2: 'toppings.2.vegetarian',
+      veg3: 'toppings.3.vegetarian',
     },
-    prepare: ({ title, media, ...toppings }) => {
+    prepare: ({ title, media, veg, ...toppings }) => {
       // 1. filter undefined toppings out
-      const tops = Object.values(toppings).filter(Boolean);
+      const tops = Object.values(toppings).filter(
+        (top) => typeof top === 'string'
+      );
+      const isVeg = Object.values(toppings)
+        .filter((top) => typeof top === 'boolean')
+        .filter(Boolean);
       // 2. return the preview object for the pizza
       return {
-        title,
+        title: `${title} ${isVeg.length === tops.length ? ' 🌱' : ''}`,
         media,
         subtitle: tops.join(', '),
       };
